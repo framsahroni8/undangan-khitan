@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Khitanan Ananda Shakeil Zaid Wi'am Sulaiman</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ===================== -->
+    <!-- LOADING SCREEN -->
+    <!-- ===================== -->
+    <div id="loader">
+      <div class="loader-content">
+        <div class="loader-arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+        <div class="loader-line"></div>
+        <span>Memuat Undangan...</span>
+      </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- OPENING COVER -->
+    <!-- ===================== -->
+    <section id="opening">
+      <div class="opening-overlay"></div>
+
+      <div class="opening-content">
+        <div class="cover-frame">
+          <p class="cover-label">Walimatul Khitan</p>
+
+          <h1>Shakeil Zaid Wi'am Sulaiman</h1>
+
+          <div class="cover-divider"></div>
+
+          <p>Kepada Yth.</p>
+
+          <!-- Diisi otomatis dari Firestore -->
+          <h2 class="guestName">Tamu Undangan</h2>
+
+          <button id="openInvitation" type="button">
+            Buka Undangan
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== -->
+    <!-- AUDIO -->
+    <!-- ===================== -->
+    <audio id="bgMusic" loop preload="auto">
+      <source src="assets/music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- ===================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ===================== -->
+    <div id="mainContent">
+      <!-- ===================== -->
+      <!-- HERO -->
+      <!-- ===================== -->
+      <section id="home" class="hero">
+        <img
+          src="assets/arabesque.svg"
+          class="ornament top-left"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <img
+          src="assets/arabesque.svg"
+          class="ornament bottom-right"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <div class="hero-content">
+          <div class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+
+          <h4 data-aos="fade-up">Walimatul Khitan</h4>
+
+          <h1 data-aos="zoom-in">Shakeil Zaid Wi'am Sulaiman</h1>
+
+          <p data-aos="fade-up">
+            Putra kedua dari Bapak Dede Sulaeman &amp; Ibu Neni Nuraeni
+          </p>
+
+          <p class="guest-greeting" data-aos="fade-up">
+            Kepada Yth. <strong class="guestName">Tamu Undangan</strong>
+          </p>
+
+          <img
+            src="assets/shakeil.jpeg"
+            class="hero-photo"
+            alt="Ananda Shakeil Zaid Wi'am Sulaiman"
+            data-aos="zoom-in"
+          />
+        </div>
+
+        <div class="mosque-dome">
+          <svg viewBox="0 0 1440 320" aria-hidden="true">
+            <path
+              fill="#D4AF37"
+              fill-opacity="1"
+              d="M0,224L80,213.3C160,203,320,181,480,181.3C640,181,800,203,960,197.3C1120,192,1280,160,1360,144L1440,128L1440,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- QUOTE -->
+      <!-- ===================== -->
+      <section class="quote">
+        <div class="container">
+          <div class="quote-box" data-aos="fade-up">
+            <p>
+              “Semoga Allah SWT menjadikan anak kami anak yang sholeh,
+              berbakti kepada orang tua, serta berguna bagi agama, bangsa dan
+              negara.”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- COUNTDOWN -->
+      <!-- ===================== -->
+      <section id="countdown">
+        <div class="section-title">
+          <h2>Menuju Hari Bahagia</h2>
+        </div>
+
+        <div class="countdown-wrapper">
+          <div class="time-box">
+            <span id="days">00</span>
+            <p>Hari</p>
+          </div>
+
+          <div class="time-box">
+            <span id="hours">00</span>
+            <p>Jam</p>
+          </div>
+
+          <div class="time-box">
+            <span id="minutes">00</span>
+            <p>Menit</p>
+          </div>
+
+          <div class="time-box">
+            <span id="seconds">00</span>
+            <p>Detik</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- ACARA -->
+      <!-- ===================== -->
+      <section id="event">
+        <div class="container">
+          <h2 class="section-heading">Detail Acara</h2>
+
+          <div class="event-card" data-aos="fade-up">
+            <h3>Khitanan</h3>
+            <p>Minggu, 20 Juli 2026</p>
+            <p>09.00 WIB - Selesai</p>
+            <p>Jl. Contoh Bahagia No. 123 Jakarta Selatan</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- GALLERY -->
+      <!-- ===================== -->
+      <section id="gallery">
+        <div class="container">
+          <h2 class="section-heading">Galeri</h2>
+
+          <div class="swiper gallerySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/gallery1.jpg" alt="Galeri khitanan 1" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/gallery2.jpg" alt="Galeri khitanan 2" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/gallery3.jpg" alt="Galeri khitanan 3" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/gallery4.jpg" alt="Galeri khitanan 4" />
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- LIGHTBOX -->
+      <!-- ===================== -->
+      <div id="lightbox" role="dialog" aria-label="Preview galeri">
+        <img id="lightboxImage" src="" alt="Preview galeri" />
+      </div>
+
+      <!-- ===================== -->
+      <!-- MAPS -->
+      <!-- ===================== -->
+      <section id="location">
+        <div class="container">
+          <h2>Lokasi Acara</h2>
+
+          <div class="map-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb="
+              title="Lokasi Acara Khitanan"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <a
+            href="https://maps.google.com"
+            class="btn-map"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buka Google Maps
+          </a>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- GIFT -->
+      <!-- ===================== -->
+      <section id="gift">
+        <div class="container">
+          <h2>Amplop Digital</h2>
+
+          <div class="bank-list">
+            <div class="bank-card">
+              <img src="assets/bca.png" alt="Logo BCA" />
+
+              <h3>BCA</h3>
+
+              <p>1234567890</p>
+
+              <button
+                class="copy-btn"
+                type="button"
+                data-rekening="1234567890"
+              >
+                Salin Rekening
+              </button>
+            </div>
+
+            <div class="bank-card">
+              <img src="assets/mandiri.png" alt="Logo Mandiri" />
+
+              <h3>Mandiri</h3>
+
+              <p>9876543210</p>
+
+              <button
+                class="copy-btn"
+                type="button"
+                data-rekening="9876543210"
+              >
+                Salin Rekening
+              </button>
+            </div>
+
+            <div class="bank-card">
+              <img src="assets/bsi.png" alt="Logo BSI" />
+
+              <h3>BSI</h3>
+
+              <p>555555555</p>
+
+              <button
+                class="copy-btn"
+                type="button"
+                data-rekening="555555555"
+              >
+                Salin Rekening
+              </button>
+            </div>
+          </div>
+
+          <div class="qris-wrapper">
+            <img
+              src="assets/qris.png"
+              id="qrisImage"
+              alt="QRIS Amplop Digital"
+            />
+
+            <p>Klik untuk memperbesar QRIS</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- QRIS MODAL -->
+      <!-- ===================== -->
+      <div id="qrisModal" role="dialog" aria-label="QRIS fullscreen">
+        <button id="closeQris" type="button" aria-label="Tutup QRIS">
+          &times;
+        </button>
+
+        <img
+          src="assets/qris.png"
+          class="qris-full"
+          alt="QRIS Amplop Digital"
+        />
+      </div>
+
+      <!-- ===================== -->
+      <!-- RSVP -->
+      <!-- ===================== -->
+      <section id="rsvp">
+        <div class="container">
+          <h2>Konfirmasi Kehadiran</h2>
+
+          <a
+            href="https://wa.me/6281234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rsvp-btn"
+          >
+            Konfirmasi via WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- UCAPAN -->
+      <!-- ===================== -->
+      <section id="wishes">
+        <div class="container">
+          <h2>Ucapan &amp; Doa</h2>
+
+          <form id="wishForm">
+            <input
+              type="text"
+              id="wishName"
+              placeholder="Nama"
+              autocomplete="name"
+              required
+            />
+
+            <textarea
+              id="wishMessage"
+              placeholder="Tulis doa dan ucapan..."
+              required
+            ></textarea>
+
+            <button type="submit">Kirim Ucapan</button>
+          </form>
+
+          <div id="wishList">
+            <div class="wish-card">
+              <p>Memuat ucapan tamu...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- PENUTUP -->
+      <!-- ===================== -->
+      <section id="closing">
+        <div class="container">
+          <h2>Terima Kasih</h2>
+
+          <p>
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+            Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+          </p>
+
+          <h3>Wassalamu'alaikum Wr. Wb.</h3>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== -->
+    <!-- BOTTOM NAV -->
+    <!-- ===================== -->
+    <nav class="bottom-nav">
+      <a href="#home">Home</a>
+      <a href="#event">Acara</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#gift">Gift</a>
+      <a href="#wishes">Ucapan</a>
+    </nav>
+
+    <!-- ===================== -->
+    <!-- LIBRARY -->
+    <!-- ===================== -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Firebase sudah di-import dari js/script.js -->
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

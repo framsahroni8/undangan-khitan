@@ -1,0 +1,258 @@
+:root {
+    --primary: #7f9581;
+    --secondary: #5f7661;
+    --gold: #d8c39a;
+    --cream: #fbf8f2;
+    --white: #ffffff;
+    --text: #334137;
+    --danger: #c75c5c;
+    --shadow: 0 12px 35px rgba(56, 71, 58, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+}
+
+.admin-container {
+    width: min(1200px, 92%);
+    margin: 40px auto 100px;
+}
+
+.admin-header {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6d776e;
+}
+
+.stats {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    min-width: 115px;
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.stat-card span {
+    display: block;
+    color: var(--secondary);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.stat-card small {
+    color: #6d776e;
+}
+
+.form-card,
+.table-card {
+    background: var(--white);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    padding: 28px;
+    margin-bottom: 28px;
+}
+
+.form-card h2,
+.table-card h2 {
+    margin-bottom: 22px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dfe5dd;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal !important;
+    height: 48px;
+}
+
+.checkbox-label input {
+    width: auto;
+}
+
+.btn-primary,
+.btn-action {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px 16px;
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: white;
+}
+
+.table-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-top input {
+    max-width: 280px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    min-width: 850px;
+    width: 100%;
+}
+
+th,
+td {
+    border-bottom: 1px solid #edf0eb;
+    padding: 14px 10px;
+    text-align: left;
+}
+
+th {
+    color: #657067;
+    font-size: 13px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge.present {
+    background: #e1f1e2;
+    color: #3f7545;
+}
+
+.badge.absent {
+    background: #f4e8e8;
+    color: #a05a5a;
+}
+
+.action-group {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-copy {
+    background: #e8efe7;
+    color: var(--secondary);
+}
+
+.btn-toggle {
+    background: #f6edd7;
+    color: #8c6c2c;
+}
+
+.btn-delete {
+    background: #f8e4e4;
+    color: var(--danger);
+}
+
+.empty-state {
+    color: #7d887e;
+    padding: 30px;
+    text-align: center;
+}
+
+#toast {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #314b35;
+    color: white;
+    border-radius: 12px;
+    opacity: 0;
+    padding: 14px 18px;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: 0.3s;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+    .admin-header {
+        flex-direction: column;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table-top {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .table-top input {
+        max-width: none;
+    }
+}
